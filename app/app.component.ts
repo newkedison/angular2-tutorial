@@ -1,5 +1,11 @@
-import { Component } from 'angular2/core';
-import { RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS } from 'angular2/router';
+import { Component, provide } from 'angular2/core';
+import {RouteConfig,
+  ROUTER_DIRECTIVES,
+  ROUTER_PROVIDERS,
+  Location,
+  LocationStrategy,
+  HashLocationStrategy
+} from "angular2/router";
 
 import { HeroService } from './hero.service';
 import { DashboardComponent } from './dashboard.component';
@@ -20,7 +26,8 @@ import { HeroDetailComponent } from './hero-detail.component';
   directives: [ROUTER_DIRECTIVES],
   providers: [
     ROUTER_PROVIDERS,
-    HeroService
+    HeroService,
+    provide(LocationStrategy, {useClass: HashLocationStrategy}),
   ]
 })
 @RouteConfig([

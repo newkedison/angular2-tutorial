@@ -12,7 +12,7 @@ After complete the whole tutorial, I will add some advance steps, including:
 * use [gulp][gulp] for complex builds
 * some tips for running by other web server(such as nginx)
 
-**IMPORTANT NOTE**: Since many libraries was change very fast, I use the lastest
+**IMPORTANT NOTE**: Since many libraries was changed very fast, I use the lastest
 version of Angular2(V2.0.0-beta.11), but some part of the library may be changed
 in the future, so the code in this repo maybe out of date.
 
